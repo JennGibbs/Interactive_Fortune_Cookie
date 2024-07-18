@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fortune Cookie</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f9f9f9;
+    }
+    .container {
+        text-align: center;
+    }
+    .fortune-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: #ffcc00;
+        border: none;
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    .fortune {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+        display: none;
+    }
+    input[type="checkbox"] {
+        display: none;
+    }
+    input[type="checkbox"]:checked + .fortune {
+        display: block;
+    }
+    .fortune-image {
+        width: 200px;
+        margin: 20px 0;
+    }
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Click the Fortune Cookie</h1>
+    <label for="fortuneCheckbox">
+        <img src="https://d15k2d11r6t6rl.cloudfront.net/public/users/Integrators/669d5713-9b6a-46bb-bd7e-c542cff6dd6a/b892316a18f140b889f7aba8f2b3cf89/editor_images/98f5144a-f39a-4237-81b8-f0a40c190594.png" alt="Fortune Cookie" class="fortune-image">
+    </label>
+    <input type="checkbox" id="fortuneCheckbox">
+    <p id="fortune" class="fortune"></p>
+</div>
+
+<script>
+    const fortunes = [
+        "🎉 Inbox News: Your gateway to enlightenment!",
+        "💡 Smart choice! Inbox News is your secret to success.",
+        "🧠 Your inbox just got a lot smarter.",
+        "🌟 Subscribing to Inbox News is pure genius!",
+        "👍 Good news! Your decision will pay off.",
+        "🎟️ Inbox News: Your ticket to daily brilliance.",
+        "🍀 Fortune favors the well-informed.",
+        "🚀 Inbox News will keep you ahead of the curve.",
+        "🔑 You’ve unlocked the key to great insights.",
+        "🎓 Smart moves lead to smart news.",
+        "📰 Inbox News: Where smart people stay informed.",
+        "🏆 You're destined for greatness with Inbox News.",
+        "🥇 Inbox News: The best decision you'll make today.",
+        "✨ Stay sharp with Inbox News!",
+        "🛤️ You’re on the path to wisdom.",
+        "🌅 Great things are coming to your inbox.",
+        "🌈 Inbox News: Your daily dose of brilliance.",
+        "💪 You’ve subscribed to success.",
+        "📚 Knowledge is power, and you’ve got it!",
+        "🚀 Inbox News: Elevating your daily insights.",
+        "🤝 You’re now part of an exclusive smart circle.",
+        "🔄 Every day brings new opportunities with Inbox News.",
+        "⬆️ Your inbox just leveled up.",
+        "💼 Subscribing to Inbox News is a wise investment.",
+        "🤩 Prepare to be amazed, every single day.",
+        "🧠 Inbox News: Your daily brain booster.",
+        "🏅 Congratulations, you're officially in the know.",
+        "🥳 You’ve got the smart advantage.",
+        "💡 Inbox News: The subscription of the savvy.",
+        "☀️ Your future looks brighter already.",
+        "📈 Stay ahead, stay informed.",
+        "📬 Inbox News: Smarter choices, smarter news.",
+        "🍀 Fortune smiles upon the well-informed.",
+        "🛤️ You’re on the fast track to brilliance.",
+        "🎯 Inbox News: The best of the best.",
+        "🗝️ You’ve chosen the path of insight.",
+        "🏆 Success is in your future with Inbox News.",
+        "🦉 You’re smarter than the average subscriber.",
+        "📈 Inbox News: Excellence delivered daily.",
+        "🌍 You’re now a part of something great.",
+        "📫 Your inbox is now a hub of knowledge.",
+        "💡 Inbox News: Wisdom at your fingertips.",
+        "🌟 You’ve made the smartest choice today.",
+        "🧠 Your mind will thank you for this.",
+        "🎨 Inbox News: Your daily inspiration.",
+        "🌠 You’re destined for smart things.",
+        "📬 Inbox News: Transforming your inbox.",
+        "🎯 You’ve got the subscription that matters.",
+        "📚 Every day is a learning day with Inbox News.",
+        "🎉 Welcome to a smarter way of living."
+    ];
+
+    document.querySelector('label[for="fortuneCheckbox"]').addEventListener('click', function() {
+        const randomFortune = fortunes[Math.floor(Math.random() * fortunes.length)];
+        document.getElementById('fortune').textContent = randomFortune;
+    });
+</script>
+
+</body>
+</html>
